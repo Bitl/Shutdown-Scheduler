@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{686087C3-D0F7-4197-9E74-D170486647AF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ShutdownExecutor</RootNamespace>
-    <AssemblyName>ShutdownExecutor</AssemblyName>
+    <RootNamespace>ShutdownScheduler</RootNamespace>
+    <AssemblyName>ShutdownScheduler</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -29,7 +29,10 @@
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\winxp_ico_shell32_dll-027.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -42,8 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandLineArguments.cs" />
-    <Compile Include="ShutdownExecutor.cs" />
+    <Compile Include="ShutdownScheduler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\winxp_ico_shell32_dll-027.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
