@@ -89,7 +89,6 @@ namespace ShutdownScheduler
             double secondsToShutdown = (adjustedDelayTime - DateTime.Now).TotalSeconds;
             if (DateTime.Now > adjustedTime)
             {
-                StartShutdownApplication("/a", true);
                 DateTime adjustedDelayTimeNow = DateTime.Now.AddHours(delayedHour).AddMinutes(delayedMinute).AddSeconds(delayedSecond);
                 double delaySeconds = (adjustedDelayTimeNow - DateTime.Now).TotalSeconds;
                 StartShutdownApplication("/f /s /t " + (delay ? Convert.ToInt32(delaySeconds) : 0), true);
